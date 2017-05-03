@@ -1,0 +1,1331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="LoginVC" title="Login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="BloodNoteFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blood Note" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moU-MR-ETV">
+                                <rect key="frame" x="20" y="118" width="374" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="72"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please Touch Below To Gain Secure Access" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrv-hj-a7a">
+                                <rect key="frame" x="20" y="536" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcs-8l-cLY">
+                                <rect key="frame" x="146" y="585" width="123" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Authenticate">
+                                    <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="Authenticate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ro5-AW-vEg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.64359033107757568" green="0.18062162399291992" blue="0.091624818742275238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <segue destination="KUy-ae-Piu" kind="show" identifier="ToTab" id="Isq-At-SJE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-778.26086956521749" y="36.684782608695656"/>
+        </scene>
+        <!--CBCEntry-->
+        <scene sceneID="bb5-Z4-5BD">
+            <objects>
+                <viewController storyboardIdentifier="CBVC" title="CBCEntry" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Phf-bt-e5l" customClass="CBCEntryViewController" customModule="BloodNoteFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jc4-CY-Whe"/>
+                        <viewControllerLayoutGuide type="bottom" id="svZ-b7-F97"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xYX-PC-y7K">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="WBC" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MSn-7Y-HcY">
+                                <rect key="frame" x="20" y="88" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.41531299840198843" green="0.76290847081218272" blue="0.74509974951125424" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="RBC" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fVc-w5-u2C">
+                                <rect key="frame" x="20" y="126" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.41531299840198843" green="0.76290847081218272" blue="0.74509974951125424" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hematocrit" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uiH-l5-IiV">
+                                <rect key="frame" x="20" y="164" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.41531299840198843" green="0.76290847081218272" blue="0.74509974951125424" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hemoglobin" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tW4-fj-W3K">
+                                <rect key="frame" x="20" y="202" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.41531299840198843" green="0.76290847081218272" blue="0.74509974951125424" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MCV" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9tS-8R-i5c">
+                                <rect key="frame" x="20" y="240" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.41531299840198843" green="0.76290847081218272" blue="0.74509974951125424" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MCH" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u6R-0M-q7w">
+                                <rect key="frame" x="20" y="278" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.41531299840198843" green="0.76290847081218272" blue="0.74509974951125424" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MCHC" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3gC-QF-ARX">
+                                <rect key="frame" x="20" y="316" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.41531299840198843" green="0.76290847081218272" blue="0.74509974951125424" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="RCDW" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sEz-RF-9kw">
+                                <rect key="frame" x="20" y="354" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.41531299840198843" green="0.76290847081218272" blue="0.74509974951125424" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Platelet Count" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DdS-WY-2hO">
+                                <rect key="frame" x="20" y="392" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.41531299840198843" green="0.76290847081218272" blue="0.74509974951125424" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MPV" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fCC-oG-EqY">
+                                <rect key="frame" x="20" y="430" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.41531299840198843" green="0.76290847081218272" blue="0.74509974951125424" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.64359033107757568" green="0.18062162399291992" blue="0.091624818742275238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="CBCEntry" id="uSm-Ow-vJf"/>
+                    <navigationItem key="navigationItem" id="MHL-Wa-GYz">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="maK-cc-g9i">
+                            <connections>
+                                <action selector="Done:" destination="Phf-bt-e5l" id="RHN-qZ-yse"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="Hct" destination="uiH-l5-IiV" id="bxO-rG-46z"/>
+                        <outlet property="Hgb" destination="tW4-fj-W3K" id="mhV-Dy-iIV"/>
+                        <outlet property="MCH" destination="u6R-0M-q7w" id="3QG-B0-M5U"/>
+                        <outlet property="MCHC" destination="3gC-QF-ARX" id="mBh-eE-WQq"/>
+                        <outlet property="MCV" destination="9tS-8R-i5c" id="ccN-YR-o8B"/>
+                        <outlet property="MPV" destination="fCC-oG-EqY" id="fXT-hb-JQ3"/>
+                        <outlet property="Platelet" destination="DdS-WY-2hO" id="JFS-XE-7ja"/>
+                        <outlet property="RBC" destination="fVc-w5-u2C" id="hbX-Np-fwJ"/>
+                        <outlet property="RCDW" destination="sEz-RF-9kw" id="ome-gy-o75"/>
+                        <outlet property="WBC" destination="MSn-7Y-HcY" id="AAS-s0-g64"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cfm-g7-Qau" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9071.0144927536239" y="-1568.4782608695652"/>
+        </scene>
+        <!--CBC-->
+        <scene sceneID="tzu-tn-ANK">
+            <objects>
+                <viewController title="CBC" id="MtK-bY-2JN" customClass="CBCViewController" customModule="BloodNoteFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SWx-hu-a5g"/>
+                        <viewControllerLayoutGuide type="bottom" id="xGX-gR-qC4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xzw-NJ-W5t">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pqo-kE-Oan">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CBCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CBCell" id="oS1-qS-aR9">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oS1-qS-aR9" id="M2E-RD-tPp">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="MtK-bY-2JN" id="kTo-Ao-GUf"/>
+                                    <outlet property="delegate" destination="MtK-bY-2JN" id="LSZ-Gr-rmA"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Complete Blood Count" id="Iex-1K-E3r">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="X7O-g7-KiM">
+                            <connections>
+                                <segue destination="Phf-bt-e5l" kind="show" id="911-bN-y2i"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="pqo-kE-Oan" id="xV2-on-LPo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OFA-JP-kj6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8541" y="-805"/>
+        </scene>
+        <!--Thyroid-->
+        <scene sceneID="4RW-7o-qjk">
+            <objects>
+                <viewController title="Thyroid" id="vjE-0D-7NZ" customClass="ThyroidViewController" customModule="BloodNoteFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BJ2-ZM-7cT"/>
+                        <viewControllerLayoutGuide type="bottom" id="FqF-BN-FfY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vio-sp-0lG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="paq-ig-air">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TPCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TPCell" id="hZS-nY-5q7">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hZS-nY-5q7" id="lhg-Ua-yXf">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vjE-0D-7NZ" id="2oi-l9-ntI"/>
+                                    <outlet property="delegate" destination="vjE-0D-7NZ" id="hf8-Km-F5F"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Thyroid" id="iye-Cg-X8a">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="BQ3-qM-3Oe">
+                            <connections>
+                                <segue destination="n18-wp-XPg" kind="show" id="6gj-Jf-MyH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="paq-ig-air" id="DfD-Ts-RF8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HnO-RF-U3n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8809" y="142"/>
+        </scene>
+        <!--ThyroidEntry-->
+        <scene sceneID="ho8-gc-G7H">
+            <objects>
+                <viewController storyboardIdentifier="TPVC" title="ThyroidEntry" useStoryboardIdentifierAsRestorationIdentifier="YES" id="n18-wp-XPg" customClass="ThyroidEntryViewController" customModule="BloodNoteFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="upP-FQ-Uwf"/>
+                        <viewControllerLayoutGuide type="bottom" id="frK-wm-XOa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nMC-Tb-RAA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TSH" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ldi-bT-3id">
+                                <rect key="frame" x="20" y="110" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98200994729995728" green="0.78652060031890869" blue="0.0016768753994256258" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Total T4" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E0B-fn-M0C">
+                                <rect key="frame" x="20" y="160" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98200994729995728" green="0.78652060031890869" blue="0.0016768753994256258" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Free T4" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4mk-KS-stc">
+                                <rect key="frame" x="20" y="215" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98200994729995728" green="0.78652060031890869" blue="0.0016768753994256258" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Total T3" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l9g-hs-c1p">
+                                <rect key="frame" x="20" y="270" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98200994729995728" green="0.78652060031890869" blue="0.0016768753994256258" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Free T3" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f0K-oh-Uut">
+                                <rect key="frame" x="20" y="322" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98200994729995728" green="0.78652060031890869" blue="0.0016768753994256258" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.64359033107757568" green="0.18062162399291992" blue="0.091624818742275238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="ThyroidEntry" id="ypq-Kl-rfZ"/>
+                    <navigationItem key="navigationItem" id="glN-ZW-siY">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="40Q-2W-DI4">
+                            <connections>
+                                <action selector="Done:" destination="n18-wp-XPg" id="r2J-bp-uDv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="FreeT3" destination="f0K-oh-Uut" id="4f0-Pp-HaA"/>
+                        <outlet property="FreeT4" destination="4mk-KS-stc" id="KeK-rh-KvW"/>
+                        <outlet property="TSH" destination="Ldi-bT-3id" id="byF-cT-05k"/>
+                        <outlet property="TotalT3" destination="l9g-hs-c1p" id="cZg-uL-F26"/>
+                        <outlet property="TotalT4" destination="E0B-fn-M0C" id="WHx-so-m98"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9cZ-TH-6iX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8164" y="970"/>
+        </scene>
+        <!--LPChart-->
+        <scene sceneID="ew9-Is-8Qr">
+            <objects>
+                <viewController title="LPChart" id="lqy-Pc-Ssb" customClass="LPChartViewController" customModule="BloodNoteFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ge9-To-SeZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="19Y-r2-2Bb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Aq-eo-ad5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dSO-p7-jtk" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="20" width="374" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dSO-p7-jtk" firstAttribute="top" secondItem="Ge9-To-SeZ" secondAttribute="bottom" id="8ZO-6w-dtO"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="dSO-p7-jtk" secondAttribute="leading" id="9Iu-lU-m6k"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dSO-p7-jtk" secondAttribute="trailing" id="GMi-fv-Jax"/>
+                            <constraint firstItem="19Y-r2-2Bb" firstAttribute="top" secondItem="dSO-p7-jtk" secondAttribute="bottom" id="iMb-5L-77E"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <tabBarItem key="tabBarItem" title="LPChart" id="8ea-ge-2qp"/>
+                    <connections>
+                        <outlet property="barChartView" destination="dSO-p7-jtk" id="CZn-6K-NJO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p5o-vb-dkH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2448" y="2015"/>
+        </scene>
+        <!--CBCChart-->
+        <scene sceneID="F71-Go-xu8">
+            <objects>
+                <viewController title="CBCChart" id="eKb-85-ZsK" customClass="CBCChartViewController" customModule="BloodNoteFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bDy-iS-fw8"/>
+                        <viewControllerLayoutGuide type="bottom" id="1ZC-A4-lIa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9eO-t6-2hX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WLk-Rm-hdR" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="28" width="374" height="651"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WLk-Rm-hdR" firstAttribute="top" secondItem="bDy-iS-fw8" secondAttribute="bottom" constant="8" id="8dA-tx-D6L"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WLk-Rm-hdR" secondAttribute="trailing" id="Nhv-ky-bQn"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="WLk-Rm-hdR" secondAttribute="leading" id="QmB-Ex-Lgi"/>
+                            <constraint firstItem="1ZC-A4-lIa" firstAttribute="top" secondItem="WLk-Rm-hdR" secondAttribute="bottom" constant="8" id="bnN-CI-nMw"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="CBCChart" id="0G0-oK-S2N"/>
+                    <connections>
+                        <outlet property="barChartView" destination="WLk-Rm-hdR" id="fE1-UK-DVS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="txg-GF-bA0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3909" y="2015"/>
+        </scene>
+        <!--ThyroidChart-->
+        <scene sceneID="elJ-FF-xuF">
+            <objects>
+                <viewController title="ThyroidChart" id="dWl-PR-lCe" customClass="ThyroidChartViewController" customModule="BloodNoteFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ofU-id-oFX"/>
+                        <viewControllerLayoutGuide type="bottom" id="g0f-5X-WJv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tu1-Xa-0lJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wHW-fQ-dkS" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="28" width="374" height="659"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="wHW-fQ-dkS" secondAttribute="leading" id="44C-65-vTh"/>
+                            <constraint firstItem="wHW-fQ-dkS" firstAttribute="top" secondItem="ofU-id-oFX" secondAttribute="bottom" constant="8" id="OeS-tk-5YD"/>
+                            <constraint firstItem="g0f-5X-WJv" firstAttribute="top" secondItem="wHW-fQ-dkS" secondAttribute="bottom" id="s62-A0-BZM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wHW-fQ-dkS" secondAttribute="trailing" id="sJz-bB-EzZ"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <tabBarItem key="tabBarItem" title="ThyroidChart" id="ww1-1Q-l30"/>
+                    <connections>
+                        <outlet property="barChartView" destination="wHW-fQ-dkS" id="RbJ-ng-Cpc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4YW-yJ-JPW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5466.666666666667" y="2014.4021739130437"/>
+        </scene>
+        <!--MPChart-->
+        <scene sceneID="yOg-Sl-06R">
+            <objects>
+                <viewController title="MPChart" id="sh7-qw-cbQ" customClass="MPChartViewController" customModule="BloodNoteFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JXQ-Uf-cwB"/>
+                        <viewControllerLayoutGuide type="bottom" id="DKK-Xc-9h4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="igJ-34-Tb1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C19-oj-ANs" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="12" width="374" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="C19-oj-ANs" secondAttribute="leading" id="KZB-xz-TiY"/>
+                            <constraint firstItem="C19-oj-ANs" firstAttribute="top" secondItem="JXQ-Uf-cwB" secondAttribute="bottom" constant="-8" id="OYR-o2-aIL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="C19-oj-ANs" secondAttribute="trailing" id="hYm-T2-UeP"/>
+                            <constraint firstItem="DKK-Xc-9h4" firstAttribute="top" secondItem="C19-oj-ANs" secondAttribute="bottom" constant="8" id="ryH-Gl-oDx"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="MPChart" id="wnp-MW-qg2"/>
+                    <connections>
+                        <outlet property="barChartView" destination="C19-oj-ANs" id="rYc-tm-KWn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jBN-dT-gst" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="970" y="2016"/>
+        </scene>
+        <!--LipidProfile-->
+        <scene sceneID="0Kx-eB-bpP">
+            <objects>
+                <viewController title="LipidProfile" id="Nag-bs-wQ8" customClass="LPViewController" customModule="BloodNoteFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3Jd-4F-OsD"/>
+                        <viewControllerLayoutGuide type="bottom" id="gde-0g-mRc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3HK-uw-el7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sbv-kR-lan">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="LPCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LPCell" id="702-0f-vng">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="702-0f-vng" id="Fcr-nT-8lM">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <accessibility key="accessibilityConfiguration" label="Date">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Nag-bs-wQ8" id="pxv-cg-mMb"/>
+                                    <outlet property="delegate" destination="Nag-bs-wQ8" id="R8d-9F-t6k"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Lipid Profile" id="aVX-Pr-RIT">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0mu-0F-S1x">
+                            <connections>
+                                <segue destination="Kll-0n-zAE" kind="show" id="RbH-QC-LJG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Sbv-kR-lan" id="Bwx-lN-1o5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GtC-uB-LfC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5960.8695652173919" y="-1665.4891304347827"/>
+        </scene>
+        <!--LPEntry-->
+        <scene sceneID="c32-47-lwj">
+            <objects>
+                <viewController storyboardIdentifier="LPVC" title="LPEntry" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Kll-0n-zAE" customClass="LPEntryViewController" customModule="BloodNoteFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WBf-Xd-HEs"/>
+                        <viewControllerLayoutGuide type="bottom" id="o7y-5m-11O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SLJ-De-neA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Triglycerides" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ILw-jl-Gqr">
+                                <rect key="frame" x="20" y="165" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.28440914805382272" green="0.68526458997640927" blue="0.91265612840652466" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="HDL" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VYE-Pv-6h0">
+                                <rect key="frame" x="20" y="228" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.28440914805382272" green="0.68526458997640927" blue="0.91265612840652466" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="LDL" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SPS-m5-gwh">
+                                <rect key="frame" x="20" y="289" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.28440914805382272" green="0.68526458997640927" blue="0.91265612840652466" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Total Cholesterol" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ziI-1x-eQR">
+                                <rect key="frame" x="20" y="106" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.28440914805382272" green="0.68526458997640927" blue="0.91265612840652466" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.64359033107757568" green="0.18062162399291992" blue="0.091624818742275238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="L7a-gF-MPd">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="AaL-O8-CIu">
+                            <connections>
+                                <action selector="Done:" destination="Kll-0n-zAE" id="spD-Pv-7ex"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="HDL" destination="VYE-Pv-6h0" id="UIS-GL-BPW"/>
+                        <outlet property="LDL" destination="SPS-m5-gwh" id="QUi-f3-oLf"/>
+                        <outlet property="TC" destination="ziI-1x-eQR" id="41e-DJ-Mcv"/>
+                        <outlet property="Triglycerides" destination="ILw-jl-Gqr" id="x5s-Fe-2BA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lw9-zv-65N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4580" y="-2451"/>
+        </scene>
+        <!--Metabolic Panel-->
+        <scene sceneID="B9J-YK-67f">
+            <objects>
+                <viewController title="Metabolic Panel" id="daJ-Wc-HS1" customClass="MPViewController" customModule="BloodNoteFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1gJ-YG-zwB"/>
+                        <viewControllerLayoutGuide type="bottom" id="mc7-nE-yOL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0NG-Hy-G97">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g7f-cr-RsF">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MPCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MPCell" id="lY0-hc-LHo">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lY0-hc-LHo" id="JDl-uK-1bL">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="daJ-Wc-HS1" id="JcK-Ih-0Uh"/>
+                                    <outlet property="delegate" destination="daJ-Wc-HS1" id="cZB-VZ-it7"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Metabolic Panel" id="zkJ-uw-oe5">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Sic-Wz-KY9">
+                            <connections>
+                                <segue destination="eYc-kB-O5R" kind="show" id="DQb-CJ-V3l"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="g7f-cr-RsF" id="mMm-Is-LQ3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c9e-iF-Qyc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2660.8695652173915" y="-1665.4891304347827"/>
+        </scene>
+        <!--MPEntry-->
+        <scene sceneID="L3I-VQ-biH">
+            <objects>
+                <viewController storyboardIdentifier="MPVC" title="MPEntry" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eYc-kB-O5R" customClass="MPEntryViewController" customModule="BloodNoteFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UoS-2R-8hU"/>
+                        <viewControllerLayoutGuide type="bottom" id="78L-sX-y0S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cqa-rM-utl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ALT" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fap-iN-NUL">
+                                <rect key="frame" x="20" y="83" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.077003254639110341" green="0.81491909898477155" blue="0.42493381053713136" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="A/G ratio" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H2z-X6-J79">
+                                <rect key="frame" x="20" y="159" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.077003254639110341" green="0.81491909898477155" blue="0.42493381053713136" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="AP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9sr-7r-B4D">
+                                <rect key="frame" x="20" y="197" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.077003254639110341" green="0.81491909898477155" blue="0.42493381053713136" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="AST" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cMw-gB-IUB">
+                                <rect key="frame" x="20" y="235" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.077003254639110341" green="0.81491909898477155" blue="0.42493381053713136" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bilirubin" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qDi-1r-oTo">
+                                <rect key="frame" x="20" y="273" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.077003254639110341" green="0.81491909898477155" blue="0.42493381053713136" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="BUN" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CGa-h2-K7G">
+                                <rect key="frame" x="20" y="311" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.077003254639110341" green="0.81491909898477155" blue="0.42493381053713136" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Calcium" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2vj-T3-SIf">
+                                <rect key="frame" x="20" y="349" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.077003254639110341" green="0.81491909898477155" blue="0.42493381053713136" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="BUN/creatinine" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cLY-0K-pUL">
+                                <rect key="frame" x="20" y="387" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.077003254639110341" green="0.81491909898477155" blue="0.42493381053713136" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Chloride" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m4r-6m-FeC">
+                                <rect key="frame" x="20" y="425" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.077003254639110341" green="0.81491909898477155" blue="0.42493381053713136" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Creatinine" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oFL-ts-8Kp">
+                                <rect key="frame" x="20" y="463" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.077003254639110341" green="0.81491909898477155" blue="0.42493381053713136" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fasting glucose" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rX9-If-D9z">
+                                <rect key="frame" x="20" y="501" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.077003254639110341" green="0.81491909898477155" blue="0.42493381053713136" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phosphorus" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xaD-u7-MVp">
+                                <rect key="frame" x="20" y="539" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.077003254639110341" green="0.81491909898477155" blue="0.42493381053713136" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Potassium" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0G2-9v-2sx">
+                                <rect key="frame" x="20" y="577" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.077003254639110341" green="0.81491909898477155" blue="0.42493381053713136" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Albumin" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jxh-J4-trr">
+                                <rect key="frame" x="20" y="121" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.077003254639110341" green="0.81491909898477155" blue="0.42493381053713136" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sodium" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i8t-Iq-382">
+                                <rect key="frame" x="20" y="615" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.077003254639110341" green="0.81491909898477155" blue="0.42493381053713136" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.64359033107757568" green="0.18062162399291992" blue="0.091624818742275238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="MPEntry" id="5Qy-Qf-WQ9" userLabel="MPEntry"/>
+                    <navigationItem key="navigationItem" id="t01-mK-GHR">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="2mM-Rd-FEN">
+                            <connections>
+                                <action selector="Done:" destination="eYc-kB-O5R" id="GG1-AO-dJi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="AG" destination="H2z-X6-J79" id="cuk-Ki-upL"/>
+                        <outlet property="ALT" destination="Fap-iN-NUL" id="O7x-ot-1wL"/>
+                        <outlet property="AP" destination="9sr-7r-B4D" id="N3W-2r-PrM"/>
+                        <outlet property="AST" destination="cMw-gB-IUB" id="XEW-5Q-k71"/>
+                        <outlet property="Albumin" destination="jxh-J4-trr" id="k8C-dG-hLn"/>
+                        <outlet property="BC" destination="cLY-0K-pUL" id="yGW-fZ-e46"/>
+                        <outlet property="BUN" destination="CGa-h2-K7G" id="4e1-wb-3bd"/>
+                        <outlet property="Bilirubin" destination="qDi-1r-oTo" id="FCT-kJ-neV"/>
+                        <outlet property="Calcium" destination="2vj-T3-SIf" id="def-jO-4jg"/>
+                        <outlet property="Chloride" destination="m4r-6m-FeC" id="2Ga-th-ses"/>
+                        <outlet property="Creatinine" destination="oFL-ts-8Kp" id="CR5-La-U0A"/>
+                        <outlet property="Fg" destination="rX9-If-D9z" id="xKg-VR-YxA"/>
+                        <outlet property="Phosphorus" destination="xaD-u7-MVp" id="B7m-OX-4UT"/>
+                        <outlet property="Potassium" destination="0G2-9v-2sx" id="Bi4-cg-hUq"/>
+                        <outlet property="Sodium" destination="i8t-Iq-382" id="2Db-9r-gj9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LSW-vw-cys" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1110" y="-2451"/>
+        </scene>
+        <!--Tab View Controller-->
+        <scene sceneID="AWS-cg-nfb">
+            <objects>
+                <tabBarController id="KUy-ae-Piu" customClass="TabViewController" customModule="BloodNoteFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="ZHe-Zw-DFd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="A3g-og-PFQ" kind="relationship" relationship="viewControllers" id="YVX-KZ-bOq"/>
+                        <segue destination="sh7-qw-cbQ" kind="relationship" relationship="viewControllers" id="PBl-UF-deV"/>
+                        <segue destination="eKb-85-ZsK" kind="relationship" relationship="viewControllers" id="qkG-Im-d33"/>
+                        <segue destination="kZj-Vh-X56" kind="relationship" relationship="viewControllers" id="cPS-gb-H0z"/>
+                        <segue destination="Wew-Gn-cAg" kind="relationship" relationship="viewControllers" id="7cH-jq-sJB"/>
+                        <segue destination="dWl-PR-lCe" kind="relationship" relationship="viewControllers" id="MJx-sw-9bZ"/>
+                        <segue destination="rqW-di-til" kind="relationship" relationship="viewControllers" id="7rM-2X-rxE"/>
+                        <segue destination="wqz-4b-LIp" kind="relationship" relationship="viewControllers" id="2j7-fr-gjy"/>
+                        <segue destination="lqy-Pc-Ssb" kind="relationship" relationship="viewControllers" id="RsF-pt-rKC"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EwO-rc-S18" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="970" y="37"/>
+        </scene>
+        <!--Lipid Nav-->
+        <scene sceneID="oNb-iG-0eR">
+            <objects>
+                <navigationController title="Lipid Nav" automaticallyAdjustsScrollViewInsets="NO" id="rqW-di-til" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Lipid Profile" id="9jL-kQ-2Oh"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="H3H-gu-RXR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Nag-bs-wQ8" kind="relationship" relationship="rootViewController" id="4a6-fe-ld5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AfK-9p-6Ih" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4607.2463768115949" y="-1665.4891304347827"/>
+        </scene>
+        <!--Thyroid Nav-->
+        <scene sceneID="TXo-ae-D1N">
+            <objects>
+                <navigationController title="Thyroid Nav" automaticallyAdjustsScrollViewInsets="NO" id="A3g-og-PFQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Thyroid" id="Of0-G7-jzc"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="057-tw-677">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vjE-0D-7NZ" kind="relationship" relationship="rootViewController" id="RxN-Ri-TwE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a9T-SY-h2r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7761" y="142"/>
+        </scene>
+        <!--CBC Nav-->
+        <scene sceneID="itU-2c-4iz">
+            <objects>
+                <navigationController title="CBC Nav" automaticallyAdjustsScrollViewInsets="NO" id="Wew-Gn-cAg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="CBC" id="Ytr-9M-07w"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7wG-y5-OP5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MtK-bY-2JN" kind="relationship" relationship="rootViewController" id="K5d-FS-HJ7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HpR-zu-ZlO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7588" y="-804"/>
+        </scene>
+        <!--Metabolic Nav-->
+        <scene sceneID="wxg-6r-fBb">
+            <objects>
+                <navigationController title="Metabolic Nav" automaticallyAdjustsScrollViewInsets="NO" id="wqz-4b-LIp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Metabolic Panel" id="uR8-Hp-Y32"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Zc-SS-ecx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="daJ-Wc-HS1" kind="relationship" relationship="rootViewController" id="RQn-mv-dzy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JeY-SS-tQy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1753.6231884057972" y="-1665.4891304347827"/>
+        </scene>
+        <!--Alarm-->
+        <scene sceneID="VJg-3H-A2d">
+            <objects>
+                <tableViewController id="Ih8-E5-LhA" customClass="AlarmListTableViewController" customModule="BloodNoteFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="kHw-q4-1EE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="alarmCell" rowHeight="100" id="SA6-r9-Scm" customClass="SwitchTableViewCell" customModule="BloodNoteFinal" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SA6-r9-Scm" id="tu5-54-I2z">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NKX-K9-4Gn">
+                                            <rect key="frame" x="8" y="8" width="398" height="84"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vob-lm-bLf">
+                                                    <rect key="frame" x="0.0" y="18.333333333333329" width="349" height="47.333333333333343"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:00 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDo-yo-GjQ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="349" height="27.000000000000004"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test alarm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nrd-2M-dpQ">
+                                                            <rect key="frame" x="0.0" y="27.000000000000004" width="349" height="20.333333333333339"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="Nrd-2M-dpQ" firstAttribute="height" secondItem="KDo-yo-GjQ" secondAttribute="height" multiplier="3/4" id="n4l-H2-8Aa"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U7b-Pi-9cB">
+                                                    <rect key="frame" x="349" y="26.666666666666668" width="51" height="31.000000000000004"/>
+                                                    <connections>
+                                                        <action selector="switchValueChanged:" destination="SA6-r9-Scm" eventType="valueChanged" id="htu-qJ-VOF"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="NKX-K9-4Gn" firstAttribute="top" secondItem="tu5-54-I2z" secondAttribute="topMargin" id="71J-wZ-s46"/>
+                                        <constraint firstItem="NKX-K9-4Gn" firstAttribute="leading" secondItem="tu5-54-I2z" secondAttribute="leadingMargin" id="dcB-aD-aXf"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="NKX-K9-4Gn" secondAttribute="bottom" id="suP-76-itU"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="NKX-K9-4Gn" secondAttribute="trailing" id="vjC-i8-WrE"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="alarmSwitch" destination="U7b-Pi-9cB" id="Dtl-ce-Cmv"/>
+                                    <outlet property="nameLabel" destination="Nrd-2M-dpQ" id="rLN-Ss-8WB"/>
+                                    <outlet property="timeLabel" destination="KDo-yo-GjQ" id="8En-Pf-tro"/>
+                                    <segue destination="xAb-Hw-QPP" kind="show" identifier="toAlarmDetail" id="XXO-Ex-rXW">
+                                        <nil key="action"/>
+                                    </segue>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ih8-E5-LhA" id="ZMl-OA-dvy"/>
+                            <outlet property="delegate" destination="Ih8-E5-LhA" id="hcA-PL-PTV"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Alarm" id="fQS-G0-EKy">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="o0N-B5-eIT">
+                            <connections>
+                                <segue destination="xAb-Hw-QPP" kind="show" identifier="toNewAlarm" id="XC8-Zf-eJz">
+                                    <nil key="action"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uF6-nJ-Dva" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-529" y="-1287"/>
+        </scene>
+        <!--New Alarm-->
+        <scene sceneID="lrC-Eg-54d">
+            <objects>
+                <tableViewController id="xAb-Hw-QPP" customClass="AlarmDetailTableViewController" customModule="BloodNoteFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Aus-o2-gyl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <sections>
+                            <tableViewSection id="4OQ-tv-zEm">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="192" id="GJH-iV-Sjx">
+                                        <rect key="frame" x="0.0" y="35" width="414" height="192"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GJH-iV-Sjx" id="zDl-Wc-9W6">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="192"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="2SZ-ga-Fq0">
+                                                    <rect key="frame" x="8" y="8" width="398" height="175.66666666666666"/>
+                                                    <date key="date" timeIntervalSinceReferenceDate="484266837.67504603">
+                                                        <!--2016-05-06 22:33:57 +0000-->
+                                                    </date>
+                                                </datePicker>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="2SZ-ga-Fq0" firstAttribute="top" secondItem="zDl-Wc-9W6" secondAttribute="topMargin" id="75j-MB-9o7"/>
+                                                <constraint firstItem="2SZ-ga-Fq0" firstAttribute="leading" secondItem="zDl-Wc-9W6" secondAttribute="leadingMargin" id="Kth-5Q-cxE"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="2SZ-ga-Fq0" secondAttribute="bottom" id="m8Q-S1-E6M"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="2SZ-ga-Fq0" secondAttribute="trailing" id="ryI-jZ-cso"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="SD3-vl-WRH">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="LaX-cs-kFM">
+                                        <rect key="frame" x="0.0" y="263" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LaX-cs-kFM" id="GW4-M0-OuN">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter an alarm title..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EdL-r7-tz2">
+                                                    <rect key="frame" x="8" y="8" width="398" height="27.666666666666664"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="EdL-r7-tz2" secondAttribute="bottom" id="Lxl-Fv-JlO"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="EdL-r7-tz2" secondAttribute="trailing" id="js8-cV-t9Q"/>
+                                                <constraint firstItem="EdL-r7-tz2" firstAttribute="top" secondItem="GW4-M0-OuN" secondAttribute="topMargin" id="u4P-dE-Mzc"/>
+                                                <constraint firstItem="EdL-r7-tz2" firstAttribute="leading" secondItem="GW4-M0-OuN" secondAttribute="leadingMargin" id="wdI-Gc-dnz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="guE-n0-eEl">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Gzx-DQ-GCS">
+                                        <rect key="frame" x="0.0" y="343" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gzx-DQ-GCS" id="0EQ-JX-N7B">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QrT-Iy-yyy">
+                                                    <rect key="frame" x="8" y="8" width="398" height="27.666666666666664"/>
+                                                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <state key="normal" title="Disable">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="enableButtonTapped:" destination="xAb-Hw-QPP" eventType="touchUpInside" id="Jo6-ve-Gip"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="QrT-Iy-yyy" firstAttribute="top" secondItem="0EQ-JX-N7B" secondAttribute="topMargin" id="Owi-Q1-37i"/>
+                                                <constraint firstItem="QrT-Iy-yyy" firstAttribute="leading" secondItem="0EQ-JX-N7B" secondAttribute="leadingMargin" id="lKC-ee-AR3"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="QrT-Iy-yyy" secondAttribute="bottom" id="wpW-Ti-bY2"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="QrT-Iy-yyy" secondAttribute="trailing" id="zM0-tQ-Jia"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="xAb-Hw-QPP" id="FS4-dN-4RK"/>
+                            <outlet property="delegate" destination="xAb-Hw-QPP" id="tDl-XI-q51"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="New Alarm" id="5sM-Wu-PKl">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="oJh-Ys-fmH">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="xAb-Hw-QPP" id="nbS-JR-fnc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="alarmDatePicker" destination="2SZ-ga-Fq0" id="H9U-3J-Zd1"/>
+                        <outlet property="alarmTitleTextField" destination="EdL-r7-tz2" id="xSo-mu-RAa"/>
+                        <outlet property="enableButton" destination="QrT-Iy-yyy" id="upL-9v-z7N"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XVg-7u-sCw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="622" y="-1287"/>
+        </scene>
+        <!--Reminders-->
+        <scene sceneID="Hxc-5P-w5K">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kZj-Vh-X56" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Reminders" id="w4o-RR-chH"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MvI-gX-9B1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ih8-E5-LhA" kind="relationship" relationship="rootViewController" id="Ajd-oE-qlQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dsm-5S-Qfd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1616" y="-1287"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="XXO-Ex-rXW"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+</document>
